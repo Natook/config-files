@@ -1,0 +1,42 @@
+[user]
+	name = Ulrika Malmgren
+	email = ulrika.malmgren@ongame.com
+[core]
+	excludesfile = ~/.gitignore_global
+
+[alias]
+	glog = log --graph --all --abbrev-commit --decorate=short
+        slog = log --graph --all --abbrev-commit --decorate=short --pretty=oneline
+	st = status -s -b
+	stree = !open -a SourceTree .
+	staged = diff --cached
+	lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --decorate=short --graph
+	web = instaweb --httpd=webrick
+	stopweb = instaweb --stop
+	logmerge = merge --no-ff --log 
+	outgoing = log --branches --not --remotes
+	overview = log --graph --simplify-by-decoration --decorate --pretty=format:'%cd%Cgreen%d %Cblue%h %Creset%s' --date=short
+	wip = commit -a -m"WIP"
+
+[color]
+	ui = auto
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
